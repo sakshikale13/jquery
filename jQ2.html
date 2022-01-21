@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div style="position: absolute;"><p>if u click on me I will disapper</p>
+    <p>click me away</p>
+    <p>click me too</p>
+    <button onclick="showall()">show all</button></div>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").click(function () {
+                    $(this).hide(1000);
+                });
+            });
+                $("button").click(function () {
+                    $("p").show(1000);
+                });
+                $("button").click(function () {
+                    $("p").toggle();
+                });
+                $("button").click(function () {
+                    $("p").slideToggle(2000);
+                });
+                $("button").click(function(){
+                    $("div").animate({left:'250px'});
+                });
+            });
+    </script>
+</body>
+
+</html>
